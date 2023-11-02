@@ -19,7 +19,7 @@ class CustomTextField extends StatelessWidget {
           BoxShadow(
             color: Colors.blue,
             blurRadius: 5,
-            spreadRadius: 0,
+            spreadRadius: 2,
           )
         ],
       ),
