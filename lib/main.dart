@@ -16,15 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: bgColor, 
+        scaffoldBackgroundColor: bgColor,
       ),
       routes: {
         MainMenuScreen.routeName: (context) => const MainMenuScreen(),
-        JoinRoomScreen.routeName:(context) => const JoinRoomScreen(),
-        CreateRoomScreen.routeName:(context) => const CreateRoomScreen(),
+        JoinRoomScreen.routeName: (context) => const JoinRoomScreen(),
+        CreateRoomScreen.routeName: (context) => const CreateRoomScreen(),
       },
       initialRoute: MainMenuScreen.routeName,
     );
   }
 }
-

@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.controller,
     required this.hintText,
-    }):super(key: key);
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

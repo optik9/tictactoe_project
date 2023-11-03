@@ -6,7 +6,7 @@ import 'package:tictactoe/widgets/custom_textfield.dart';
 
 class CreateRoomScreen extends StatefulWidget {
   static String routeName = '/create-room';
-  const CreateRoomScreen({Key? key}):super(key: key);
+  const CreateRoomScreen({Key? key}) : super(key: key);
 
   @override
   State<CreateRoomScreen> createState() => _CreateRoomScreenState();
@@ -21,6 +21,7 @@ class _CreateRoomScreenState extends State<CreateRoomScreen> {
     super.dispose();
     _nameController.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -31,38 +32,31 @@ class _CreateRoomScreenState extends State<CreateRoomScreen> {
           margin: const EdgeInsets.symmetric(
             horizontal: 20,
           ),
-        
-      
-        
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const CustomText(
-          shadows: [
-            Shadow(
-              blurRadius: 40,
-              color: Colors.blue,
-            ),
-          ],
-          text: 'Create Room',
-          fontSize: 70,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const CustomText(
+                shadows: [
+                  Shadow(
+                    blurRadius: 40,
+                    color: Colors.blue,
+                  ),
+                ],
+                text: 'Create Room',
+                fontSize: 70,
+              ),
+              SizedBox(height: size.height * 0.08),
+              CustomTextField(
+                controller: _nameController,
+                hintText: 'Enter your nickname',
+              ),
+              SizedBox(height: size.height * 0.04),
+              CustomButton(onTap: () {}, text: 'Create'),
+            ],
           ),
-          SizedBox(height: size.height * 0.08),
-          CustomTextField(
-            controller: _nameController, 
-            hintText: 'Enter your nickname',
-            ),
-      
-          SizedBox(height: size.height * 0.04),
-          CustomButton (onTap: () {}, text: 'Create'),
-
-      ],
+        ),
       ),
-      ),
-      ),
-
-
     );
 
     //comment
