@@ -51,7 +51,7 @@ class _CreateRoomScreenState extends State<CreateRoomScreen> {
                 controller: _nameController,
                 hintText: 'Enter your nickname',
               ),
-              SizedBox(height: size.height * 0.04),
+              SizedBox(height: size.height * 0.045),
               CustomButton(onTap: () {}, text: 'Create'),
             ],
           ),
