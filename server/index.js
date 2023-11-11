@@ -14,6 +14,10 @@ app.use(express.json());
 
 const DB = "mongodb+srv://optik:4gtXCj9fDmS7sG1D@cluster0.8x8dld1.mongodb.net/?retryWrites=true&w=majority";
 
+io.on("connection",(socket)=> {
+    console.log("connected!");
+});
+
 mongoose.connect(DB).then(() => {
     console.log("Connection successful!");
 })
