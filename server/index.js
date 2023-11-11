@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 var server = http.createServer(app);
 
-var socketio = require("socket.io")(server);
+var io = require("socket.io")(server);
 
 //middleware
 app.use(express.json());
@@ -16,6 +16,10 @@ const DB = "mongodb+srv://optik:4gtXCj9fDmS7sG1D@cluster0.8x8dld1.mongodb.net/?r
 
 io.on("connection",(socket)=> {
     console.log("connected!");
+    socket.on("createRoom", async ({ nickname })=>{
+      console.log(nickname);
+     //console.log("xxxx");
+    });
 });
 
 mongoose.connect(DB).then(() => {
